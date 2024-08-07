@@ -1,5 +1,4 @@
-export function renderGallery(images) {
-  const gallery = document.getElementById('gallery');
+export function renderGallery(images, gallery) {
   gallery.innerHTML = images.map(image => `
     <div class="image-card">
       <a href="${image.largeImageURL}">
@@ -13,8 +12,7 @@ export function renderGallery(images) {
   `).join('');
 }
 
-export function clearGallery() {
-  const gallery = document.getElementById('gallery');
+export function clearGallery(gallery) {
   gallery.innerHTML = '';
 }
 
